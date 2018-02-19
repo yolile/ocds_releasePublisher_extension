@@ -1,0 +1,1 @@
+Includes the information about the publisher at release level for the cases in that a release-package or record-packages contains releases from different publishers.
