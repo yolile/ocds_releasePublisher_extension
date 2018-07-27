@@ -1,10 +1,29 @@
 {
   "properties": {
-    "publisher": {
+    "publishers": {
+      "title": "Publishers",
+      "description": "List of publishers of the given release",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Publisher",
+        "uniqueItems": true
+      }
+    }
+  },
+  "definitions": {
+    "Publisher": {
       "title": "Publisher",
       "description": "Information to uniquely identify the publisher of this release.",
       "type": "object",
       "properties": {
+        "id": {
+          "title": "Publisher Id",
+          "description": "An id for identifier the publisher inside the array",
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
         "name": {
           "title": "Name",
           "description": "The name of the organisation or department responsible for publishing this data.",
@@ -37,7 +56,8 @@
         }
       },
       "required": [
-        "name"
+        "name",
+        "id"
       ]
     }
   }

@@ -1,10 +1,12 @@
-## Release Publisher Extension
+## Release Publishers Extension
 ### Description
 Includes the information about the publisher at release level for the cases in that a release-package or record-packages 
 contains releases from different publishers.
 
+In a compileRelease could be more than one publisher, for that, the publishers field is an array
+
 ### Fields
-- release.publisher: Information to uniquely identify the publisher of this release.
+- release.publishers: Information to uniquely identify the publisher(s) of this release.
 
 ### Example
 
@@ -22,20 +24,22 @@ contains releases from different publishers.
             "ocid": "ocds-07smqs-1303516", 
             "releases": [
                 {
-                    "publisher": {
+                    "publishers": [{
+                        "id" : 1,
                         "uri": "http://www.gob.mx/sfp", 
                         "uid": "27511", 
                         "name": "SECRETARÍA DE LA FUNCIÓN PÚBLICA"
-                        }, 
+                        }], 
                     "language": "es"
                     ....
                 }, 
                 {
-                    "publisher": {
+                    "publishers": [{
+                        "id": 1
                         "uri": "http://www.gob.mx/shcp", 
                         "uid": "00000", 
                         "name": "SECRETARÍA DE HACIENDA Y CRÉDITO PÚBLICO"
-                        }, 
+                        }], 
                     "language": "es"
                     ....
                 }
